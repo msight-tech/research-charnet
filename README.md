@@ -3,7 +3,7 @@
 This project hosts the testing code for CharNet, described in our paper:
 
     Convolutional Character Networks
-    Linjie Xing, Zhi Tian, Weilin Huang, and  Matthew R. Scott;
+    Linjie Xing, Zhi Tian, Weilin Huang, and Matthew R. Scott;
     In: Proceedings of the IEEE International Conference on Computer Vision (ICCV), 2019.
 
    
