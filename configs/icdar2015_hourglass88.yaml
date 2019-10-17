@@ -1,0 +1,6 @@
+INPUT_SIZE: 2280
+WEIGHT: "weights/icdar2015_hourglass88.pth"
+CHAR_DICT_FILE: "datasets/ICDAR2015/test/char_dict.txt"
+WORD_LEXICON_PATH: "datasets/ICDAR2015/test/GenericVocabulary.txt"
+RESULTS_SEPARATOR: ","
+SIZE_DIVISIBILITY: 128

@@ -1,0 +1,36 @@
+# compilation and distribution
+__pycache__
+_ext
+*.pyc
+*.so
+charnet.egg-info/
+build/
+dist/
+
+# pytorch/python/numpy formats
+*.pth
+*.pkl
+*.npy
+
+# ipython/jupyter notebooks
+*.ipynb
+**/.ipynb_checkpoints/
+
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
+
+# Pycharm editor settings
+.idea
+
+# project dirs
+/models
+datasets/ICDAR2015/test/gts/
+datasets/ICDAR2015/test/imgs/
+datasets/ICDAR2015/test/per_image_vocabularies/
+datasets/ICDAR2015/test/results/
+datasets/ICDAR2015/test/weekly_vocabulary.txt
+icdar2015_results/
+
