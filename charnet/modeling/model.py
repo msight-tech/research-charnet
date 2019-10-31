@@ -110,9 +110,9 @@ class CharRecognizer(nn.Module):
 
 
 class CharNet(nn.Module):
-    def __init__(self):
+    def __init__(self, backbone=hourglass88()):
         super(CharNet, self).__init__()
-        self.backbone = hourglass88()
+        self.backbone = backbone
         decoder_channels = 256
         bottleneck_channels = 128
         self.word_detector = WordDetector(
