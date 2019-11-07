@@ -6,6 +6,8 @@ This project hosts the testing code for CharNet, described in our paper:
     Linjie Xing, Zhi Tian, Weilin Huang, and Matthew R. Scott;
     In: Proceedings of the IEEE International Conference on Computer Vision (ICCV), 2019.
 
+Note: training code will be released later, 'watch' this repo to stay tuned.
+
    
 ## Installation
 
