@@ -12,11 +12,13 @@ import numpy as np
 import argparse
 from charnet.config import cfg
 import matplotlib.pyplot as plt
+import time
 
 cuda = torch.cuda.is_available()
 
 def save_word_recognition(word_instances, image_id, save_root, separator=chr(31)):
-    with open('{}/{}.txt'.format(save_root, image_id), 'wt') as fw:
+    os.makedirs(save_root, exist_ok=True)
+    with open(os.path.join(save_root, '{}.txt'.format(image_id)), 'wt') as fw:
         for word_ins in word_instances:
             if len(word_ins.text) > 0:
                 fw.write(separator.join([str(_) for _ in word_ins.word_bbox.astype(np.int32).flat]))
@@ -40,9 +42,9 @@ def vis(img, word_instances):
     img_word_ins = img.copy()
     for word_ins in word_instances:
         word_bbox = word_ins.word_bbox
-        cv2.polylines(img_word_ins, [word_bbox[:8].reshape((-1, 2)).astype(np.int32)],
+        img_word_ins = cv2.polylines(img_word_ins, [word_bbox[:8].reshape((-1, 2)).astype(np.int32)],
                       True, (0, 255, 0), 2)
-        cv2.putText(
+        img_word_ins = cv2.putText(
             img_word_ins,
             '{}'.format(word_ins.text),
             (word_bbox[0], word_bbox[1]), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1
@@ -71,6 +73,7 @@ if __name__ == '__main__':
         charnet.cuda()
 
     for im_name in sorted(os.listdir(args.image_dir)):
+        start_time = time.time()
         print("Processing {}...".format(im_name))
         im_file = os.path.join(args.image_dir, im_name)
         im_original = cv2.imread(im_file)
@@ -81,3 +84,6 @@ if __name__ == '__main__':
                 word_instances, os.path.splitext(im_name)[0],
                 args.results_dir, cfg.RESULTS_SEPARATOR
             )
+        vis_img = vis(cv2.imread(im_file), word_instances)
+        cv2.imwrite(os.path.join(args.results_dir,'{}.png'.format(os.path.splitext(im_name)[0])), vis_img)
+        print('Tooks {} secs'.format(time.time()-start_time))
