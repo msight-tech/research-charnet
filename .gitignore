@@ -34,4 +34,5 @@ datasets/ICDAR2015/test/results/
 datasets/ICDAR2015/test/weekly_vocabulary.txt
 icdar2015_results/
 data
+result
 .DS_Store
