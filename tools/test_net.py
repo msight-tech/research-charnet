@@ -86,4 +86,4 @@ if __name__ == '__main__':
             )
         vis_img = vis(cv2.imread(im_file), word_instances)
         cv2.imwrite(os.path.join(args.results_dir,'{}.png'.format(os.path.splitext(im_name)[0])), vis_img)
-        print('Tooks {} secs'.format(time.time()-start_time))
+        print('Processing time: {} secs'.format(time.time()-start_time))
