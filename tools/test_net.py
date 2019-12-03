@@ -13,6 +13,7 @@ import argparse
 from charnet.config import cfg
 import matplotlib.pyplot as plt
 
+cuda = torch.cuda.is_available()
 
 def save_word_recognition(word_instances, image_id, save_root, separator=chr(31)):
     with open('{}/{}.txt'.format(save_root, image_id), 'wt') as fw:
@@ -66,7 +67,8 @@ if __name__ == '__main__':
     charnet = CharNet()
     charnet.load_state_dict(torch.load(cfg.WEIGHT))
     charnet.eval()
-    charnet.cuda()
+    if cuda:
+        charnet.cuda()
 
     for im_name in sorted(os.listdir(args.image_dir)):
         print("Processing {}...".format(im_name))

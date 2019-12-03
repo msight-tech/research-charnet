@@ -17,6 +17,7 @@ import torchvision.transforms as T
 from .postprocessing import OrientedTextPostProcessing
 from charnet.config import cfg
 
+cuda = torch.cuda.is_available()
 
 def _conv3x3_bn_relu(in_channels, out_channels, dilation=1):
     return nn.Sequential(OrderedDict([
@@ -145,7 +146,9 @@ class CharNet(nn.Module):
         self.transform = self.build_transform()
 
     def forward(self, im, im_scale_w, im_scale_h, original_im_w, original_im_h):
-        im = self.transform(im).cuda()
+        im = self.transform(im)
+        if cuda:
+            im = im.cuda()
         im = im.unsqueeze(0)
         features = self.backbone(im)
 
