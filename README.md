@@ -6,8 +6,6 @@ This project hosts the testing code for CharNet, described in our paper:
     Linjie Xing, Zhi Tian, Weilin Huang, and Matthew R. Scott;
     In: Proceedings of the IEEE International Conference on Computer Vision (ICCV), 2019.
 
-Note: training code will be released later, 'watch' this repo to stay tuned.
-
    
 ## Installation
 
@@ -41,10 +39,10 @@ If you find this work useful for your research, please cite as:
 
 For any questions, please feel free to reach: 
 ```
-github@malong.com
+github@malongtech.com
 ```
 
 
 ## License
 
-CharNet is CC-BY-NC 4.0 licensed, as found in the [LICENSE](LICENSE) file. It is released for academic research / non-commercial use only. If you wish to use for commercial purposes, please contact bd@malong.com.
+CharNet is CC-BY-NC 4.0 licensed, as found in the [LICENSE](LICENSE) file. It is released for academic research / non-commercial use only. If you wish to use for commercial purposes, please contact sales@malongtech.com.
