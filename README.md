@@ -23,6 +23,9 @@ python setup.py build develop
     python tools/test_net.py configs/icdar2015_hourglass88.yaml <images_dir> <results_dir>
     ```
 
+## Results
+![](https://github.com/hamzakhalil798/research-charnet/blob/master/images/result_1.jpg)
+![](https://github.com/hamzakhalil798/research-charnet/blob/master/images/result_2.jpg)
 
 
 ## Citation
