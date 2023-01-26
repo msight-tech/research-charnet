@@ -7,12 +7,22 @@ This project hosts the testing code for CharNet, described in our paper:
     In: Proceedings of the IEEE International Conference on Computer Vision (ICCV), 2019.
 
    
+## Updates
+
+1. Added Visualization
+2. icdar_2015 Test Dataset
+
+
 ## Installation
 
 ```
 pip install torch torchvision
 python setup.py build develop
 ```
+
+
+## Dataset
+Download icdar_2015 Test Dataset [here](https://drive.google.com/file/d/1mPRmedDdC9UPlNQAEohMCMWlnTRoiqfC/view?usp=share_link)
 
 
 ## Run
@@ -22,6 +32,10 @@ python setup.py build develop
     ```
     python tools/test_net.py configs/icdar2015_hourglass88.yaml <images_dir> <results_dir>
     ```
+
+## Results
+![](https://github.com/hamzakhalil798/research-charnet/blob/master/images/result_1.jpg)
+![](https://github.com/hamzakhalil798/research-charnet/blob/master/images/result_2.jpg)
 
 
 ## Citation

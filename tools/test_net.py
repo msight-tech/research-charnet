@@ -22,6 +22,12 @@ def save_word_recognition(word_instances, image_id, save_root, separator=chr(31)
                 fw.write(separator)
                 fw.write(word_ins.text)
                 fw.write('\n')
+    for word_ins in word_instances:
+      if len(word_ins.text) > 0:
+          bbox = word_ins.word_bbox.astype(np.int32)
+          cv2.rectangle(im_original, (bbox[0], bbox[1]), (bbox[4], bbox[5]), (0, 255, 0), 2)
+          cv2.putText(im_original, word_ins.text, (bbox[0], bbox[1]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+    cv2.imwrite('{}/{}.jpg'.format(args.results_dir, os.path.splitext(im_name)[0]), im_original)           
 
 
 def resize(im, size):
