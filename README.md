@@ -8,9 +8,11 @@ This project hosts the testing code for CharNet, described in our paper:
 
    
 ## Updates to main repo
+
 1. Added Visualization
 2. icdar_2015 Test Dataset
-   
+
+
 ## Installation
 
 ```
