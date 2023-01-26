@@ -9,6 +9,7 @@ This project hosts the testing code for CharNet, described in our paper:
    
 ## Updates
 1. Added Visualization
+2. icdar_2015 Test Dataset
    
 ## Installation
 
@@ -16,6 +17,10 @@ This project hosts the testing code for CharNet, described in our paper:
 pip install torch torchvision
 python setup.py build develop
 ```
+
+
+## Dataset
+Download icdar_2015 Test Dataset [here](https://drive.google.com/file/d/1mPRmedDdC9UPlNQAEohMCMWlnTRoiqfC/view?usp=share_link)
 
 
 ## Run
