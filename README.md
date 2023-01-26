@@ -7,7 +7,7 @@ This project hosts the testing code for CharNet, described in our paper:
     In: Proceedings of the IEEE International Conference on Computer Vision (ICCV), 2019.
 
    
-## Updates
+## Updates to main repo
 1. Added Visualization
 2. icdar_2015 Test Dataset
    
